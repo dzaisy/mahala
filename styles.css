@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: namco;
+    background-color:#6f062c; 
+}
+
+#top-panel {
+    background-color: #930f3f; 
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-around; /* equal spacing all around*/
+    align-items: center;
+    
+}
+#top-panel h1 {
+    font-family: 'Indie Flower', cursive; /* font change*/
+}
+
+#search-panel {
+    padding: 10px;
+    text-align: center; 
+    display: flex;
+    align-items: left;
+}
+
+#search-panel input[type="text"] { /*rounds out the search panel*/
+    border-radius: 20px; 
+    padding: 8px; 
+    border: none; 
+    outline: none; 
+    width: 200px;
+}
+
+#search-panel button, /*rounds out the buttons*/
+.favourite-button,
+.login-button {
+    border-radius: 20px;
+    padding: 8px 16px; 
+    margin-left: 10px;
+    border: none; 
+    outline: none; 
+    cursor: pointer;
+    color: grey;
+    background-color: white;
+}
+
+#more-buttons {
+    display: flex;
+    align-items: center;
+}
+
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-card {
+    background-color: #8c2834;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+
