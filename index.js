@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function searchGames() { // searchy search
-    const search = searchInput.value.trim().toLowerCase();
+    const search = searchInput.value.toLowerCase();
     console.log('Search term:', search); // debugging log
     fetch(apiUrl)
       .then(response => {
