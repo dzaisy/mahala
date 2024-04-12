@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahala Games</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"
-  </head>
   <body>
     <div id="top-panel">
       <h1>Mahala Games</h1>
@@ -15,10 +13,20 @@
         <button onclick="searchGames()">search</button>
       </div>
       <div id="more-buttons">
-        <button class="favourite-button" onclick="addFavourite()">&#10084;</button>
-        <button class="login-button">login</button>
+        <button id="favourite-button" class="favourite-button" onclick="addFavourite()">&#10084;</button>
+        <div id="login-panal">
+          <button id="login-button" class="login-button">login</button>
+        </div>
       </div>
-  </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button id="close-modal" class="close-button">&times;</button>
+        <div id="comment-form"></div>
+        <button id="login-modal" class="modal-button">login</button>
+        <button id="signup-modal" class="modal-button" id="signup-button" > sign up</button>
+      </div>
+    </div>
   <div id="game-container"></div>
 
     <script src="index.js"></script>

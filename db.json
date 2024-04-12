@@ -1,0 +1,165 @@
+{
+    "games": [
+        {
+           "id": 1,
+           "title": "Impossible Quiz",
+           "short_des": "an impossible game",
+           "genre": "trivia",
+           "url": "https://poki.com/en/g/the-impossible-quiz",
+           "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/3cd96c99-46c1-4ff0-b04a-82381ea07349.png"
+        },
+        {
+            "id": 2,
+            "title": "Impossible Quiz 2",
+            "short_des": "more impossible games",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/the-impossible-quiz-2",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/674fcb03268972a3a154e67bab44b70a.jpeg"
+        },
+        {
+            "id": 3,
+            "title": "Impossible Quizmas",
+            "short_des": "an impossible christmas game",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/the-impossible-quizmas",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/1f039a07-7c20-4f04-8885-992c45a87f65.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Brain Test: Tricky Puzzels",
+            "short_des": "test your brain with tricky puzzels",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/brain-test-tricky-puzzles",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/e689238d6dcbb672b749ab65960c0d65.png"
+        },
+        {
+            "id": 5,
+            "title":"Brain Test 2: Tricky Stories",
+            "short_des":"test your brain with tricky stories",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/brain-test-2-tricky-stories",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/9a06b8572ca88b3da665d191d8b0df12.png"
+        },
+        {
+            "id": 6,
+            "title":"Brain Test 3: Tricky Quests",
+            "short_des":"test your brain with tricky quests",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/brain-test-3-tricky-quests",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/311e1411784d5e63172e8fed86952517.png"
+        },
+        {
+            "id": 7,
+            "title":"Brain Test 4: Tricky Friends",
+            "short_des":"test your brain with tricky friends",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/brain-test-4-tricky-friends",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/3a3f4fd89bc679e6720382fb8930797a.png"
+        },
+        {
+            "id": 8,
+            "title":"Brain Test: Tricky Words",
+            "short_des": "test your brain with tricky words",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/brain-test-tricky-words",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/7fec965b335fcdd53808446a54e9ef0b.png"
+        },
+        {
+            "id": 9,
+            "title": "Hangman",
+            "short_des": "guess or DIE",
+            "genre": "trivia",
+            "url": "https://poki.com/en/g/hangman",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/648855bd08919f6ff3c68c188dc1acaa.jpeg"
+        },
+        {
+            "id": 10,
+            "title": "Cooking Korean Lesson", 
+            "short_des": "cook korean food",
+            "genre": "cooking",
+            "url": "https://poki.com/en/g/cooking-korean-lesson",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/a483ecddc1711ab827f820c2f70610bb.png"
+        },
+        {
+            "id": 11,
+            "title": "Yummy Taco", 
+            "short_des": "make yummy tacos",
+            "genre": "cooking",
+            "url": "https://poki.com/en/g/yummy-taco",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/d873218a0dc58eb5c6da68b3e1215cf6.png"
+        },
+        {
+            "id": 12,
+            "title": "Papa's Pizzeria", 
+            "short_des": "make pizza",
+            "genre": "cooking",
+            "url": "https://poki.com/en/g/papas-pizzeria",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/377fd7d97c2b2f4fe25618ccffcc601b.jfif"
+        },
+        {
+            "id": 13,
+            "title": "Papa's Freezeria", 
+            "short_des": "make drinks",
+            "genre": "cooking",
+            "url": "https://poki.com/en/g/papas-freezeria",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/fe7c19da32800855dfb8f039adfe353b.png"
+        },
+        {
+            "id": 14,
+            "title": "Papa's Burgeria", 
+            "short_des": "make burgers",
+            "genre": "cooking",
+            "url": "https://poki.com/en/g/papas-burgeria",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/4fad37685af404ca0f987d927358ab79.jfif"
+        },
+        {
+            "id": 15,
+            "title": "Chicky Farm", 
+            "short_des": "run a chicken farm",
+            "genre": "cosy",
+            "url": "https://poki.com/en/g/chicky-farm",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/8ecb48b84a3a7d87aff85bc87956f180.png"
+        },
+        {
+            "id": 16,
+            "title": "Crossy Road", 
+            "short_des": "cross the road",
+            "genre": "cosy",
+            "url": "https://poki.com/en/g/crossy-road",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/76fc1b000203faf71b77a75b10022142.png"
+        },
+        {
+            "id": 17,
+            "title": "Stickman Escape", 
+            "short_des": "escape prison",
+            "genre": "action",
+            "url": "https://poki.com/en/g/stickman-escape",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/a646194cdc4febb0eac0a496fae531a1.png"
+        },
+        {
+            "id": 18,
+            "title": "Stick Merge", 
+            "short_des": "pew pew",
+            "genre": "action",
+            "url": "https://poki.com/en/g/stick-merge",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/3b3f4aeacf600fd3910f1c3d513c0636.png"
+        },
+        {
+            "id": 19,
+            "title": "Stick Defenders", 
+            "short_des": "defend",
+            "genre": "action",
+            "url": "https://poki.com/en/g/stick-defenders",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/7db1b3c920544b27bdec9f67d0c2d92c.png"
+        },
+        {
+            "id": 20,
+            "title": "Dadish", 
+            "short_des": "find your kids",
+            "genre": "cosy",
+            "url": "https://poki.com/en/g/dadish",
+            "thumbnail": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/6bb56bc01338e59c549454759281f4bf.jpeg"
+        }
+    ]
+}   
+ 
