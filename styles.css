@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color:#6f062c; 
+    background-color:#600355; 
 }
 
 #top-panel {
@@ -59,7 +59,7 @@ body {
 }
 
 .game-card {
-    background-color: #8c2834;
+    background-color: #eb4909e5;
     border-radius: 7px;
     box-shadow: 10px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px ;

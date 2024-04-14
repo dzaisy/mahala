@@ -174,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modal.style.display === 'none' || modal.style.display === '') {
         modal.style.display = 'block';
         modal.style.zIndex = '1000'; // ensure the modal is above other elements
-    } else {
+    } 
+    else {
         modal.style.display = 'none';
     }
   }
