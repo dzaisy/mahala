@@ -8,40 +8,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const signupModalButton = document.getElementById('signup-modal');
   const searchInput = document.getElementById('searchInput');
   const gameContainer = document.getElementById('game-container');
-    
-  function fetchGames() { // fetching games from api
+  const commentFormContainer = document.getElementById('comment-form'); 
+
+  let loggedIn = false; 
+
+  function fetchGames() {
       fetch(apiUrl)
-          .then(response => { // response processing
-              if(!response.ok) {
+          .then(response => {
+              if (!response.ok) {
                   throw new Error('failure fetching games');
               }
               return response.json();
           })
-          .then(data => { // calls function with data fetched
+          .then(data => {
               displayGames(data);
           })
-          .catch(error => { // error handling
-              console.error('error fetching games', error)
-          })
+          .catch(error => {
+              console.error('error fetching games', error);
+          });
   }
   fetchGames();
 
-  function displayGames(games) { // game display on page
-      gameContainer.innerHTML = ''; // clears game container
+  function displayGames(games) {
+      gameContainer.innerHTML = '';
       games.forEach(game => {
           const gameCard = createGameCard(game);
           gameContainer.appendChild(gameCard);
       });
   };
 
-  function createGameCard(game) { // creating game card
+  function createGameCard(game) {
       const { title, thumbnail, genre, short_des } = game;
 
       const gameCard = document.createElement('div');
       gameCard.classList.add('game-card');
 
       const overlay = document.createElement('div');
-      gameCard.classList.add('overlay');
+      overlay.classList.add('overlay');
       gameCard.appendChild(overlay);
 
       const img = document.createElement('img');
@@ -56,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const genreId = document.createElement('p');
       genreId.textContent = genre;
-      gameCard.appendChild(genreId)
+      gameCard.appendChild(genreId);
 
       const description = document.createElement('p');
       description.textContent = short_des;
@@ -66,24 +69,63 @@ document.addEventListener('DOMContentLoaded', () => {
       favouriteButton.innerHTML = '&#10084;';
       favouriteButton.classList.add('favourite-button');
       favouriteButton.addEventListener('click', function() {
-          console.log('favourite button clicked for game:', game['title']);
-            favouriteButton.style.color = favouriteButton.style.color === 'red' ? 'grey' : 'red';
+          if (loggedIn) {
+              console.log('favourite button clicked for game:', game['title']);
+              favouriteButton.style.color = favouriteButton.style.color === 'red' ? 'grey' : 'red';
+          } 
+          else {
+              alert('please login to like the game.');
+          }
       });
       gameCard.appendChild(favouriteButton);
 
       const commentButton = document.createElement('button');
-      commentButton.innerHTML = '&#128172;'; // unicode for comment icon
+      commentButton.innerHTML = '&#128172;';
       commentButton.classList.add('comment-button');
       commentButton.addEventListener('click', function() {
-        openCommentModal(game);
+          if (loggedIn) {
+              openCommentModal(game);
+          } 
+          else {
+              alert('please login to comment on the game.');
+          }
       });
       gameCard.appendChild(commentButton);
 
       return gameCard;
   }
 
+  function openCommentModal(game) {
+      commentFormContainer.innerHTML = ''; // clear previous content
+      const commentForm = document.createElement('form');
+      const commentInput = document.createElement('textarea');
+      commentInput.setAttribute('placeholder', 'write your comment here...');
+      const commentSubmitButton = document.createElement('button');
+      commentSubmitButton.textContent = 'Submit';
+      commentSubmitButton.type = 'submit';
+
+      commentForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const commentText = commentInput.value.trim();
+          if (commentText !== '') {
+              // add code to submit the comment to the server
+              console.log(`comment submitted for game "${game.title}": ${commentText}`);
+              // display the comment on the page if needed
+          } 
+          else {
+              alert('please enter a comment before submitting.');
+          }
+      });
+
+      commentForm.appendChild(commentInput);
+      commentForm.appendChild(commentSubmitButton);
+      commentFormContainer.appendChild(commentForm);
+
+      loginModal.style.display = 'block'; // display the modal with comment form
+  }
+
   favourite.addEventListener('click', () => {
-    console.log('favourite button clicked');
+      console.log('favourite button clicked');
   })
 
   login.addEventListener('click', () => {
@@ -95,47 +137,71 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('click', (event) => {
-    if (event.target === loginModal) {
-      loginModal.style.display = 'none';
-    }
+      if (event.target === loginModal) {
+          loginModal.style.display = 'none';
+      }
   });
 
   loginModalButton.addEventListener('click', () => {
-    console.log('login button clicked');
+      console.log('login button clicked');
+      loggedIn = true; // set loggedIn to true when login button is clicked
+      loginModal.style.display = 'none'; // hide the login modal
   });
 
   signupModalButton.addEventListener('click', () => {
-    console.log('sign Up button clicked');
+      console.log('sign Up button clicked');
+      loggedIn = true; // set loggedIn to true when sign up button is clicked
+      loginModal.style.display = 'none'; // hide the login modal
   });
 
-  function searchGames() { // searchy search
-    const search = searchInput.value.toLowerCase();
-    console.log('Search term:', search); // debugging log
-    fetch(apiUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('failure fetching games');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('data:', data); // debugging log
-        const filteredGames = data.games.filter(game => {
-          return game.title.toLowerCase().includes(search) || game.genre.toLowerCase().includes(search);
-        })
-        console.log('filtered games:', filteredGames); // debugging log
-        displayGames(filteredGames);
-      })
-      .catch(error => {
-        console.error('error fetching games', error);
-      });
+  login.addEventListener('click', () => {
+    loginModal.style.display = 'block';
+    loginModal.style.zIndex = '1000'; // ensure the modal is above other elements
+  });
 
+  closeLoginModal.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === loginModal) {
+        loginModal.style.display = 'none';
+    }
+  });
+
+  function toggleModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal.style.display === 'none' || modal.style.display === '') {
+        modal.style.display = 'block';
+        modal.style.zIndex = '1000'; // ensure the modal is above other elements
+    } else {
+        modal.style.display = 'none';
+    }
   }
 
-  searchInput.addEventListener('keypress', function(e) {  // activate search input on enter key press
-    if (e.key === 'Enter') {
-      console.log('enter key clicked') // checks if event is triggered
-      searchGames();
-    }
+  function searchGames() {
+      const search = searchInput.value.toLowerCase();
+      fetch(apiUrl)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('failure fetching games');
+              }
+              return response.json();
+          })
+          .then(data => {
+              const filteredGames = data.games.filter(game => {
+                  return game.title.toLowerCase().includes(search) || game.genre.toLowerCase().includes(search);
+              })
+              displayGames(filteredGames);
+          })
+          .catch(error => {
+              console.error('error fetching games', error);
+          });
+  }
+
+  searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'enter') {
+          searchGames();
+      }
+  });
 });
-})

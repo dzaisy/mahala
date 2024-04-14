@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahala Games</title>
     <link rel="stylesheet" href="styles.css">
-  <body>
+</head>
+<body>
     <div id="top-panel">
-      <h1>Mahala Games</h1>
-      <div id="search-panel">
-        <input type="text" id="searchInput" placeholder="search games...">
-        <button onclick="searchGames()">search</button>
-      </div>
-      <div id="more-buttons">
-        <button id="favourite-button" class="favourite-button" onclick="addFavourite()">&#10084;</button>
-        <div id="login-panal">
-          <button id="login-button" class="login-button">login</button>
+        <h1>Mahala Games</h1>
+        <div id="search-panel">
+            <input type="text" id="searchInput" placeholder="Search games...">
+            <button onclick="searchGames()">search</button>
         </div>
-      </div>
+        <div id="more-buttons">
+            <button id="favourite-button" class="favourite-button" onclick="addFavourite()">&#10084; favourite</button>
+            <button id="login-button" class="login-button" onclick="toggleModal('modal')">login</button>
+        </div>
     </div>
     <div id="modal" class="modal">
-      <div class="modal-content">
-        <button id="close-modal" class="close-button">&times;</button>
-        <div id="comment-form"></div>
-        <button id="login-modal" class="modal-button">login</button>
-        <button id="signup-modal" class="modal-button" id="signup-button" > sign up</button>
-      </div>
+        <div class="modal-content">
+            <button id="close-modal" class="close-button" onclick="toggleModal('modal')">&times;</button>
+            <h2>login</h2>
+            <form id="login-form">
+                <label for="username">username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password">
+                <button type="submit" onclick="login()">login</button>
+            </form>
+            <p>don't have an account? <button class="modal-button" onclick="toggleModal('signup-modal')">sign up</button></p>
+        </div>
     </div>
-  <div id="game-container"></div>
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="toggleModal('signup-modal')">&times;</button>
+            <h2>sign up</h2>
+            <form id="signup-form">
+                <label for="new-username">username:</label>
+                <input type="text" id="new-username" name="new-username">
+                <label for="new-password">password:</label>
+                <input type="password" id="new-password" name="new-password">
+                <button type="submit" onclick="signup()">sign up</button>
+            </form>
+            <p>already have an account? <button class="modal-button" onclick="toggleModal('modal')">login</button></p>
+        </div>
+    </div>
+    <div id="game-container"></div>
 
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
