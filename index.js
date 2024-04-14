@@ -191,9 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('error fetching games:', error);
         });
   }
-
+  
   searchInput.addEventListener('keypress', function(e) {
-    if (e.key === 'enter') { // checks to see if enter is pressed
+    if (e.key === 'Enter') { // checks to see if enter is pressed
         e.preventDefault(); // prevents form submission
         searchGames();
     }
