@@ -61,11 +61,11 @@ body {
 .game-card {
     background-color: #eb4909e5;
     border-radius: 7px;
-    box-shadow: 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px rgba(29, 20, 20, 0.437);
     margin-bottom: 10px ;
     padding: 10px;
-    width: 250px;
-    
+    width: 300px;
+    height: auto;
     position: relative;
 }
 
